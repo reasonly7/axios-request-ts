@@ -30,7 +30,9 @@ const message = {
   },
 };
 
+// Todo implement this.
 const serverCodeMessageMap: Record<number, string> = {};
+// Todo implement this.
 const httpCodeMessgeMap: Record<number, string> = {};
 
 request.interceptors.response.use(
@@ -42,7 +44,6 @@ request.interceptors.response.use(
     if (code >= 200 && code < 300) {
       msg && message.success(msg);
     } else {
-      // Todo implement this.
       message.error(serverCodeMessageMap[code]);
     }
 
