@@ -7,6 +7,13 @@ export interface ResponseData<T> {
   message?: string;
 }
 
+export interface PaginateData<T> {
+  records: T[];
+  page: number;
+  size: number;
+  total: number;
+}
+
 const request = axios.create({
   //  baseURL: import.meta.env.VITE_API_PREFIX
 });
