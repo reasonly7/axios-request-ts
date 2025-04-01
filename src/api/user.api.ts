@@ -1,4 +1,4 @@
-import { get } from "./request";
+import { request } from "./request";
 
 export interface UserItem {
   id: number;
@@ -9,6 +9,6 @@ export interface UserItem {
 export default {
   // usage demonstration
   query(params: { page: number; size: number }) {
-    return get<UserItem[]>("/users", { data: params });
+    return request.get<UserItem[]>("/users", { data: params });
   },
 };
